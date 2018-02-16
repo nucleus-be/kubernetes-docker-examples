@@ -15,7 +15,7 @@ replicationcontroller "mariadb-rc" created
 To see the state:
 
 ```
-kubectl --kubeconfig=kubectl.config get pods
+$ kubectl --kubeconfig=kubectl.config get pods
 NAME               READY     STATUS    RESTARTS   AGE
 mariadb-rc-mm7k8   0/1       Pending   0          59s
 ```
@@ -23,7 +23,7 @@ mariadb-rc-mm7k8   0/1       Pending   0          59s
 All details of the pod:
 
 ```
-kubectl --kubeconfig=kubectl.config describe pod mariadb-rc-mm7k8
+$ kubectl --kubeconfig=kubectl.config describe pod mariadb-rc-mm7k8
 Name:           mariadb-rc-mm7k8
 Namespace:      default
 Node:           <none>
