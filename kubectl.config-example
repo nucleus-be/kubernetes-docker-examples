@@ -1,0 +1,22 @@
+current-context: default-context
+apiVersion: v1
+clusters:
+- cluster:
+    api-version: v1
+    server: https://{YOUR_ASSIGNED_IP}:443/
+    insecure-skip-tls-verify: true
+  name: {CLIENT_NAME}
+contexts:
+- context:
+    cluster: {CLIENT_NAME}
+    namespace: default
+    user: user1
+  name: default-context
+users:
+- name: user1
+  user:
+    username: "{YOUR_USERNAME}"
+    password: "{YOUR_PASSWORD}"
+kind: Config
+preferences:
+  colors: true
