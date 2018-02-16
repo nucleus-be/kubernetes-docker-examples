@@ -8,7 +8,7 @@ It is highly recommended to read about the [concepts](https://kubernetes.io/docs
 
 Our support department will give you your Kubernetes configuration file, tailored to your setup.
 
-To see an example, have a look in [kubetl.config-example](tree/master/kubectl.config-example).
+To see an example, have a look in [kubetl.config-example](kubectl.config-example).
 
 Once you have your configuration, save it on your local machine as `kubectl.config`.
 
