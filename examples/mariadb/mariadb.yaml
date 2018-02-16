@@ -1,0 +1,27 @@
+---
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: mariadb-rc
+spec:
+  replicas: 1
+  selector:
+    app: mariadb
+  template:
+    metadata:
+      name: mariadb-rc
+      labels:
+        app: mariadb
+    spec:
+      volumes:
+      - name: mariadb-pv-storage
+        persistentVolumeClaim:
+          claimName: mariadb-pv-claim
+      containers:
+      - name: mariadb
+        image: mariadb:latest
+        ports:
+        - containerPort: 3306
+        volumeMounts:
+        - mountPath: "/var/lib/mysql"
+          name: mariadb-pv-storage
